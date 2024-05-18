@@ -32,7 +32,7 @@ body {
   gap: 25px;
 }
 .report__card {
-  border-radius: 20px;
+  border-radius: 12px;
   position: relative;
   overflow: hidden;
   color: #FFF;
@@ -87,7 +87,7 @@ body {
   background-color: hsl(235, 46%, 20%);
   position: absolute;
   bottom: 0;
-  border-radius: 20px;
+  border-radius: 12px;
   padding: 2rem;
   width: 100%;
 }
@@ -114,13 +114,13 @@ body {
   padding: 1.5rem 0 0.5rem;
 }
 .report__card__front__time__previous {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 15px;
 }
 .report__card__back {
   background-color: hsl(15, 100%, 70%);
   height: 100%;
-  border-radius: 20px;
+  border-radius: 12px;
   padding: 2rem;
 }
 .report__card__back.report__card__back--play {
@@ -152,6 +152,89 @@ body {
 
 .active {
   color: #FFF !important;
+}
+
+@media screen and (max-width: 1280px) {
+  .report {
+    display: flex;
+    flex-direction: column;
+    max-width: 330px;
+    margin: 3rem 0;
+  }
+  .report__card {
+    height: 160px;
+  }
+  .report__card--infos {
+    height: 200px;
+  }
+  .report__card--infos .report__card__front {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .report__card--infos .report__card__front__img {
+    width: 70px;
+  }
+  .report__card--infos .report__card__front__report {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .report__card--infos .report__card__front__name {
+    font-size: 1.5rem;
+    padding-bottom: 0;
+  }
+  .report__card--infos .report__card__back {
+    padding: 1.25rem 2rem;
+  }
+  .report__card--infos .report__card__back__list {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .report__card__front {
+    padding: 2rem 1.625rem;
+  }
+  .report__card__front__time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .report__card__front__time__current {
+    font-size: 2rem;
+    padding: 0;
+  }
+  .report__card__back {
+    background-color: hsl(15, 100%, 70%);
+    height: 100%;
+    border-radius: 12px;
+    padding: 2rem;
+  }
+  .report__card__back.report__card__back--play {
+    background-color: hsl(195, 74%, 62%);
+  }
+  .report__card__back.report__card__back--study {
+    background-color: hsl(348, 100%, 68%);
+  }
+  .report__card__back.report__card__back--exercise {
+    background-color: hsl(145, 58%, 55%);
+  }
+  .report__card__back.report__card__back--exercise img {
+    top: 0;
+  }
+  .report__card__back.report__card__back--social {
+    background-color: hsl(264, 64%, 52%);
+  }
+  .report__card__back.report__card__back--social img {
+    top: -16px;
+  }
+  .report__card__back.report__card__back--self-care {
+    background-color: hsl(43, 84%, 65%);
+  }
+  .report__card__back img {
+    position: absolute;
+    right: 16px;
+    top: -8px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

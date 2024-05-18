@@ -17,7 +17,7 @@
    width: 80%;
    gap: 25px;
    &__card {
-      border-radius: 20px;
+      border-radius: 12px;
       position: relative;
       overflow: hidden;
       color: #FFF;
@@ -73,7 +73,7 @@
           background-color: $DarkBlue;
           position: absolute;
           bottom: 0;
-          border-radius: 20px;
+          border-radius: 12px;
           padding: 2rem;
           width: 100%;
           &:hover{
@@ -100,7 +100,7 @@
               padding: 1.5rem 0 .5rem;
             }
             &__previous{
-              font-weight: 400;
+              font-weight: 300;
               font-size: 15px;
             }
           }
@@ -108,7 +108,7 @@
       &__back{
           background-color: $LightOrange;
           height: 100%;
-          border-radius: 20px;
+          border-radius: 12px;
           padding: 2rem;
           &.report__card__back--play{
             background-color: $SoftBlue;
@@ -143,4 +143,87 @@
 
 .active{
   color: #FFF !important;
+}
+
+@media screen and (max-width: 1280px) {
+  .report{
+    display: flex;
+    flex-direction: column;
+    max-width: 330px;
+    margin: 3rem 0;
+    &__card {
+      height: 160px;
+      &--infos {
+        height: 200px;
+         .report__card__front{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            &__img{
+              width: 70px;
+            }
+            &__report{
+              font-size: 1rem;
+              margin: 0;
+            }
+            &__name{
+              font-size: 1.5rem;
+              padding-bottom: 0;
+            }
+         }
+         .report__card__back{
+          padding: 1.25rem 2rem;
+            &__list{
+              flex-direction: row;
+              justify-content: space-between;
+              width: 100%;
+            }
+         }
+      }
+      &__front{
+          padding: 2rem 1.625rem;
+          &__time{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &__current{
+              font-size: 2rem;
+              padding: 0;
+            }
+          }
+      }
+      &__back{
+          background-color: $LightOrange;
+          height: 100%;
+          border-radius: 12px;
+          padding: 2rem;
+          &.report__card__back--play{
+            background-color: $SoftBlue;
+          }
+          &.report__card__back--study{
+            background-color: $LightRed;
+          }
+          &.report__card__back--exercise{
+            background-color: $LimeGreen;
+            img{
+                top: 0;
+            }
+          }
+          &.report__card__back--social{
+            background-color: $Violet;
+            img{
+                top: -16px;
+            }
+          }
+          &.report__card__back--self-care{
+            background-color: $SoftOrange;
+          }
+          img{
+            position: absolute;
+            right: 16px;
+            top: -8px;
+          }
+      }
+   }
+  }
 }
